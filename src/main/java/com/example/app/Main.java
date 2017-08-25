@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
         ProductRepo.seed();
         CampaignRepo.seed();
-        System.out.println(System.currentTimeMillis());
 
         Vertx.vertx().deployVerticle(new SimpleAPI(), res -> {
             if (res.succeeded()) {
